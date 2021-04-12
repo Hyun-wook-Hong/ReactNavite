@@ -17,6 +17,13 @@
  2. public 폴더: 잘 변경되지 않는 static 파일 모음  
  3. src: html, css, javascript 소스 파일들  
   → App.js가 메인 페이지이며, 이 파일에서 코딩을 시작하면 됨  
-    
+  
+- 왜 Node.js를 설치해서 진행했나요?  
+create-react-app 라이브러리를 사용하여 리액트 프로젝트를 쉽게 생성하기 위함
+
+  → 사용한 Node.js Tool  
+   - npm: Node.js 터미널 명령 (package.json에서 수정 가능)  
+   - npx: 리액트 세팅이 다 되어 있는 boilerplate, 프로젝트 생성을 쉽게 할 수 있도록 도와주는 라이브러리  
+   -    
 출처: 코딩애플님 유튜브  
 링크: https://www.youtube.com/watch?v=nahwuaXmgt8
