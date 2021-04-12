@@ -9,6 +9,14 @@
     React Native 프로젝트 생성 후 터미널에서 아래 순서로 명령어를 입력하면 프로젝트가 실행됨.  
     1) cd [프로젝트명] 폴더 → 2) npm start 명령어 입력  
  6. http://localhost:3000/ 이 주소에서 src/App.js를 이용해 코딩하라고 브라우저에 뜨면 성공  
-
+  
+  
+  
+- React 프로젝트 구조  
+ 1. node_modules: Node.js 관련 모듈 모음  
+ 2. public 폴더: 잘 변경되지 않는 static 파일 모음  
+ 3. src: html, css, javascript 소스 파일들  
+  → App.js가 메인 페이지이며, 이 파일에서 코딩을 시작하면 됨  
+    
 출처: 코딩애플님 유튜브  
 링크: https://www.youtube.com/watch?v=nahwuaXmgt8
