@@ -1,4 +1,4 @@
-# 2021.04.12(월) ReactNavite 첫걸음
+# 01 - 2021.04.12(월) ReactNavite 첫걸음
 - 프로젝트 설치 방법
 - 1. 터미널에서 npm 스크립트를 실행할 수 있는 Node.js를 최신 버전으로 설치한다.
 - 2. Tool으로 사용할 Visual Studio Code를 설치한다.
