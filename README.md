@@ -10,3 +10,5 @@
 -    1) cd [프로젝트명] 폴더 → 2) npm start 명령어 입력
 - 6. http://localhost:3000/ 이 주소에서 src/App.js를 이용해 코딩하라고 브라우저에 뜨면 성공
 -    Edit src/App.js and save to reload.
+출처: 코딩애플님 유튜브
+링크: https://www.youtube.com/watch?v=nahwuaXmgt8
