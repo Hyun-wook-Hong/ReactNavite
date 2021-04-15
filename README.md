@@ -28,6 +28,10 @@ create-react-app 라이브러리를 사용하여 리액트 프로젝트를 쉽�
 # 02 - 2021.04.13(화) React에서 HTML 대신 사용하는 JSX 문법  
     1. 태그에 클래스를 주고 싶으면 class가 아닌 className 사용
     - <div className="클래스명">
+    - 함수는 이렇게
+       function 함수(){
+       return 100;
+       }
     2. JSX가 HTML보다 편리한 이유: 데이터 바인딩이 쉽다. (그래서 React, Angular, Vue를 많이 쓴다)
        → 데이터 바인딩: 서버에서 가져온 데이터를 브라우저, UI 등에 보여주는 것
         1) { 변수명, 함수 등 }
