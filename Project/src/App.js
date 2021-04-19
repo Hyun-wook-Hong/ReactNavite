@@ -1,8 +1,12 @@
+// warning 안 보이게
+// eslint-disable
+
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
   /*
     React.js JSX 문법 규칙
 
@@ -30,7 +34,8 @@ function App() {
   // 1. state는 변수 대신 사용하는 데이터 저장 공간이다.
   // 배열처럼 선언하되, 변수명, 데이터 변경시 사용할 함수명을 같이 선언할 수 있다.
   // 2. useState() 함수를 이용해 만들어야 한다.
-  let[title, changeTitle] = useState(['홍대 일렉기타 리페어샵 추천', '상수역 앞 우동 맛집 추천', '이주의 업데이트 내역']); //[a,b];
+  let[title, changeTitle] = useState(['남자 코트 추천', '상수역 앞 우동 맛집 추천', '이주의 업데이트 내역']); //[a,b];
+  let[likeButton, changeLikeButton] = useState(0);
   // a: '남자 코트 추천' - title
   // b: 남자 코트 추천 state 정정해주는 함수 0 changeTitle
 
@@ -43,6 +48,7 @@ function App() {
   /*
     React에 있는 내장 함수를 하나 쓰겠습니다 (state 선언)
   */
+
   let posts = "강남 고기 맛집";
   function whatDayisItToday(day){
     switch(day){
@@ -63,24 +69,30 @@ function App() {
       }     
   }
 
+  let 바꿀값 = [...title];
+  바꿀값[0] = '여자 코트 추천';
+
   let today = new Date();
 
   let year = today.getFullYear(); //연도
-  let month = today.getMonth();   //달
+  let month = today.getMonth() +1;   //달
   let date = today.getDate();     //날짜
   let day = today.getDay();       //요일 (숫자)
 
   let day_str = whatDayisItToday(day);
 
-
+  // span tag click 이벤트
+  // onClick = { 클릭될때 실행될 함수 }
+  // onClick = { ()=>{실행될 내용} }
 
   return (
     <div className="App">
       <div className="black-nav">
           <div>개발 Blog</div>
         </div>
+        <button onClick = { ()=>{ changeTitle(바꿀값) } } >이벤트</button>
         <div className="list">
-        <h3> { title[0] } </h3>
+        <h3> { title[0] } <span onClick = { ()=>{ changeLikeButton(likeButton + 1); } }>👍</span> { likeButton } </h3>
         <p> { "발행일: " + year + "/" + month + "/" + date + " " + day_str } </p>
         <hr/>
         <h3> { title[1] } </h3>
