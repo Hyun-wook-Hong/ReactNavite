@@ -69,8 +69,16 @@ function App() {
       }     
   }
 
-  let 바꿀값 = [...title];
-  바꿀값[0] = '여자 코트 추천';
+
+  // 변경함수를 사용하되, state에 대한 복사본을 만들어야 한다.
+  function 제목바꾸기(){
+    let newArray = [...title]; // deep copy
+    newArray[0] = "여자 코트 추천";
+    changeTitle( newArray );
+  }
+
+  //let 바꿀값 = [...title];
+  //바꿀값[0] = '여자 코트 추천';
 
   let today = new Date();
 
@@ -90,20 +98,48 @@ function App() {
       <div className="black-nav">
           <div>개발 Blog</div>
         </div>
-        <button onClick = { ()=>{ changeTitle(바꿀값) } } >이벤트</button>
+        <button onClick = { 제목바꾸기 } >이벤트</button>
         <div className="list">
         <h3> { title[0] } <span onClick = { ()=>{ changeLikeButton(likeButton + 1); } }>👍</span> { likeButton } </h3>
         <p> { "발행일: " + year + "/" + month + "/" + date + " " + day_str } </p>
         <hr/>
-        <h3> { title[1] } </h3>
+        <h3> { title[1] } <span onClick = { ()=>{ changeLikeButton(likeButton + 1); } }>👍</span> { likeButton } </h3>
         <p> { "발행일: " + year + "/" + month + "/" + date + " " + day_str } </p>
         <hr/>
-        <h3> { title[2] } </h3>
+        <h3> { title[2] } <span onClick = { ()=>{ changeLikeButton(likeButton + 1); } }>👍</span> { likeButton } </h3>
         <p> { "발행일: " + year + "/" + month + "/" + date + " " + day_str } </p>
         <hr/>
         </div>
+
+        <Modal />
     </div>
   );
+}
+
+// return 구문 속 연속된 tag들이 위치할 수 없음.
+
+/*
+컴포넌트: 긴 HTML을 저장해 블록처럼 가져다가 쓸 수 있다.
+1. 이름은 대괄호 시작
+2. return 구문 안에 div 태그가 나란히 여러개 있을 수 없음 = 태그 하나로 묶어야함
+
+어떤것을 컴포넌트로 만들까? 
+- 반복적으로 출현하는 HTML 덩어리들
+- 자주 변경되는 UI들
+- 다른 페이지 만들때도 컴포넌트로 만듬
+
+컴포넌트가 너무 많을경우 단점
+- state를 쓸때 복잡해진다.
+  (상위 컴포넌트에서 만든 state를 쓰려면 props 문법을 사용해야 한다.)
+*/
+function Modal(){
+  return(
+    <div className="modal">
+    <h2>제목</h2>
+     <p>날짜</p>
+     <p>상세내용</p>
+  </div>
+  )
 }
 
 export default App;
