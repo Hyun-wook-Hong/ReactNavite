@@ -57,5 +57,4 @@
 
       * 추가 과제: 3개의 List 작성, 오늘 날짜는 자바스크립트로 현재 시간/요일을 불러오도록 작성해놓음
        
-출처: 코딩애플님 유튜브  
-링크: https://www.youtube.com/watch?v=nahwuaXmgt8
+출처 링크: https://www.youtube.com/watch?v=nahwuaXmgt8
