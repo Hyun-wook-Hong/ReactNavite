@@ -35,7 +35,7 @@ const playersILike = [
   }
 ];
 
-// prop (property) fav를 kimchi라는 이름을 부여함
+// prop (property) 배열의 map 함수를 이용해 String, 이미지 끌고오기 가능함
 function App() {
   return (
     <div className="App">
