@@ -1,7 +1,8 @@
 import React from 'react';
 
 // 부모 컴포넌트 -> 자식 컴포넌트로 데이터를 보내는 것이 가능하다.
-
+// 예시) 외부 API로부터 받아온 playersILike Array를 하위 컴포넌트 props로 받아
+//       App 컴포넌트로 데이터 전달해주기
 function FootballPlayer({ name, picture }){
   return( 
     <div>
